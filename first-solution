@@ -1,0 +1,16 @@
+function validParentheses(parens){
+  //TODO 
+  let openB = 0;
+  for(let i = 0; i < parens.length; i++){
+    if(parens[i] === '('){
+      openB++;
+    } else if (parens[i] === ')') {
+      openB--;
+    }
+  }
+  if(openB === 0 && parens[0] !== ')' && parens[parens.length - 1] !== '(') {
+    return true;
+  } else {
+    return false;
+  }
+}
